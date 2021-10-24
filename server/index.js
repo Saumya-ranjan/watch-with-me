@@ -1,8 +1,8 @@
 const express = require("express");
-const { addListener } = require("nodemon");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const authRoute = require("./routes/auth");
 dotenv.config();
 
 mongoose
@@ -14,6 +14,9 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+app.use(express.json());
+
+app.use("/server/auth", authRoute);
 
 app.listen(3000, () => {
   console.log("Server started at port 3000");
