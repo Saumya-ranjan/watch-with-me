@@ -16,7 +16,11 @@ mongoose
   });
 app.use(express.json());
 
-app.use("/server/auth", authRoute);
+app.use("/api/auth", authRoute);
+
+// app.get("/api/auth/login", (req, res) => {
+//   res.send({ hello: "world" });
+// });
 
 app.listen(3000, () => {
   console.log("Server started at port 3000");
