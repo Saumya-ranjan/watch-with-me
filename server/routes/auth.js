@@ -28,6 +28,7 @@ router.post("/register", async (req, res) => {
 });
 
 //login
+//if unhandle error it is because of /login or maybe because u are putting username instead of email and password
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
