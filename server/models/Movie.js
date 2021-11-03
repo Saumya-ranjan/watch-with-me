@@ -14,7 +14,7 @@ const MovieSchema = new mongoose.Schema({
   isSeries: { type: Boolean, default: false },
 });
 
-module.exports = mongoose.model("User", MovieSchema);
+module.exports = mongoose.model("Movie", MovieSchema);
 
 // const UserModule = mongoose.model("User", UserSchema);
 

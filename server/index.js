@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
+const movieRoute = require("./routes/movies");
 dotenv.config();
 
 mongoose
@@ -20,7 +21,7 @@ app.use(express.json());
 
 app.use("/server/auth", authRoute); //uses auth route /server/auth/register or login
 app.use("/server/users", userRoute); //uses userroute /server/user/:id or /find/:id or /
-
+app.use("/server/movies", movieRoute);
 // app.get("/api/auth/login", (req, res) => {
 //   res.send({ hello: "world" });
 // });

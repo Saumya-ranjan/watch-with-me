@@ -7,7 +7,7 @@ const ListSchema = new mongoose.Schema({
   content: { type: Array },
 });
 
-module.exports = mongoose.model("User", ListSchema);
+module.exports = mongoose.model("List", ListSchema);
 
 // const UserModule = mongoose.model("User", UserSchema);
 
