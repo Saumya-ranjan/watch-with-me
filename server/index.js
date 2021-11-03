@@ -18,8 +18,8 @@ mongoose
 
 app.use(express.json());
 
-app.use("/server/auth", authRoute);
-app.use("/server/users", userRoute);
+app.use("/server/auth", authRoute); //uses auth route /server/auth/register or login
+app.use("/server/users", userRoute); //uses userroute /server/user/:id or /find/:id or /
 
 // app.get("/api/auth/login", (req, res) => {
 //   res.send({ hello: "world" });
